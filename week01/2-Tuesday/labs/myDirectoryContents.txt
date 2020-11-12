@@ -1,0 +1,24 @@
+.
+..
+.gitignore
+deserts.txt
+glaciers.txt
+islands.txt
+lakes.txt
+mountains.txt
+myDirectoryContents.txt
+mynewfile.txt
+newFile.txt
+oceans.txt
+volcanoes.txt
+total 10
+-rw-r--r-- 1 Matth 197609 213 Nov 10 11:38 deserts.txt
+-rw-r--r-- 1 Matth 197609 183 Nov 10 11:38 glaciers.txt
+-rw-r--r-- 1 Matth 197609 137 Nov 10 11:38 islands.txt
+-rw-r--r-- 1 Matth 197609 103 Nov 10 11:38 lakes.txt
+-rw-r--r-- 1 Matth 197609 118 Nov 10 11:38 mountains.txt
+-rw-r--r-- 1 Matth 197609 152 Nov 10 14:32 myDirectoryContents.txt
+-rw-r--r-- 1 Matth 197609   6 Nov 10 14:21 mynewfile.txt
+-rw-r--r-- 1 Matth 197609  12 Nov 10 14:28 newFile.txt
+-rw-r--r-- 1 Matth 197609  73 Nov 10 11:38 oceans.txt
+-rw-r--r-- 1 Matth 197609 206 Nov 10 11:38 volcanoes.txt
