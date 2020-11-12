@@ -16,3 +16,31 @@
 
 # Use the following formula:
 # F = (C * 9/5) + 32
+
+
+number = int(input("""Hi! Could you please input a number. I'll be able to tell you whether it is even or 
+odd! Whenever you're finished just type -1!\n"""))
+
+while(number != -1):
+    if(number % 2 == 0):
+        print("Your number was even!")
+        number = int(input("input another number!\n"))
+    else:
+        print("You had an odd number!")
+        number = int(input("input another number!\n"))
+    
+print("You decided to quit")
+
+
+# count = 0
+
+# while(count < 10):
+#     count += 1
+#     print(f"The count is {count}")
+# print("Done with the count")
+
+# answer =''
+# while(answer != "when"):
+#     answer = input("Say when:")
+#     answer = answer.lower()
+# print("say Cheese!")
