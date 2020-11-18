@@ -57,13 +57,20 @@
 # file_handle.close()
 
 # print (contents)
-import pickle
+# import pickle
 
-# data = {"Matthew" : "Roberts"}
+# # data = {"Matthew" : "Roberts"}
 
-# with open("data.pickle" ,"wb") as fh:
-#     pickle.dump(data, fh)
-#This is how you save data
+# # with open("data.pickle" ,"wb") as fh:
+# #     pickle.dump(data, fh)
+# #This is how you save data
 
-with open('data.pickle', "rb") as fh:
-    phoneBook = pickle.load(fh)
+# with open('data.pickle', "rb") as fh:
+#     phoneBook = pickle.load(fh)
+
+benji = CuddlyPet("Benji", 50, 20, 20, 1)
+print(benji.fullness, benji.happiness)
+# 50 20
+benji.be_alive()
+print(benji.fullness, benji.happiness)
+# 30 19
