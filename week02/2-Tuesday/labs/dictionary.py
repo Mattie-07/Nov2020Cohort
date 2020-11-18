@@ -1,7 +1,23 @@
 # 1. Create a dictionary called zodiac with the following inforation.
 # Each key is the name of the zodiac
+##CRUD - Create, Read, Update Delete
 
 
+zodiac = {
+    "Aries": "The Warrior",
+    "Taurus": " The Builder",
+    "Gemini": " The Messenger",
+    "Cancer": "The Mother",
+    "Leo" : "The King",
+    "Virgo": "The Analyst",
+    "Libra": "The Judge",
+    "Scorpio": "The Magician",
+    "Sagittarius": "The Gypsy",
+    "Capricon" : "The Father",
+    "Aquaris": "The Thinker",
+    "Pisces" : "The Mystic"
+
+}
 # Aries - The Warrior
 # Taurus - The Builder
 # Gemini - The Messenger
@@ -15,8 +31,31 @@
 # Aquarius - The Thinker
 # Pisces - TheMystic
 
+# mySign = zodiac["Libra"]
+# print (mySign)
+
+# exist = zodiac.get("Pisces")
+# print(exist)
+# isTrue = "Leo" in zodiac
+# print(isTrue)
+
+# values = zodiac.keys()
+# print(values)
+
+# zodiac["Libra"] = "Matthew's sign"
+# print(zodiac)
+
+# print(zodiac)
+# del zodiac["Aries"]
+# print(zodiac)
+
+
+
+
+
 
 # 1a. Retrieve information about your zodiac from the zodiac dictionary
+
 
 # 2. Given the following dictionary
 
@@ -27,7 +66,29 @@ phonebook_dict = {
 }
 
 
-phonebook_dict["Kareem"] = "938-489-1234"
+# phonebook_dict["Kareem"] = "938-489-1234"
+
+
+# herNumber = phonebook_dict["Alice"]
+# print(herNumber)
+
+# phonebook_dict["Kareem"] = "938-489-1234"
+# print(phonebook_dict)
+
+# del phonebook_dict["Alice"]
+
+# phonebook_dict["Bob"] = "968-345-2345"
+# print(phonebook_dict)
+# print(phonebook_dict.values())
+
+
+itemized = phonebook_dict.items()
+print(itemized)
+
+
+for key, values in phonebook_dict.items():
+    print(key)
+    print (values)
 # 2a. Print Elizabeth's phone number
 # 2b. Add a entry to the dictionary: Kareem's number is 938-489-1234.
 # 2c. Delete Alice's phone entry.
