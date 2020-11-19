@@ -1,52 +1,66 @@
 from textwrap import dedent
-d = {
+phoneBook= {
     "Levi": "832-291-7066",
     "Tracy": "541-990-0760",
     "Skittles": "666-666-6666"
 }
 
+name = ""
+print("Electronic Phone Book")
+print("=" * 21)
+print(dedent("""
+1. Look up an entry
+2. Set an entry
+3. Delete an entry
+4. List all entrys
+5. Quit
+"""))
+choice = input("What do you want to do (1-5)?\n")
+    
 
-def phonebook(d):
-    print("Electronic Phone Book")
-    print("=" * 21)
-    print(dedent("""
-    1. Look up an entry
-    2. Set an entry
-    3. Delete an entry
-    4. List all entrys
-    5. Quit
-    """))
-    choice = input("What do you want to do (1-5)? ")
+def nameInput():
+    nameChoice = input("What name would you like to use?\n")
+    return nameChoice
 
+
+
+
+
+# create a loop
+#create a function for all repeating code. 
+
+while True:
     if choice == "1":
-        name = input("Name: ")
-        if name in d:
-            print(d[name])
+        print("You want to look someone up")
+        name = nameInput()
+        if name in phoneBook:
+            print(phoneBook[name])
         else:
             print("{} not found".format(name))
         input("")
-        phonebook(d)
+        
     elif choice == "2":
         name = input("Name: ")
         number = input("Number: ")
-        d[name] = number
+        phoneBook[name] = number
         input("Entry stored for {}".format(name))
-        phonebook(d)
+        
     elif choice == "3":
         name = input("Name: ")
-        del d[name]
+        del phoneBook[name]
         input("Deleted entry for {}".format(name))
-        phonebook(d)
+        
     elif choice == "4":
-        for key in d:
-            print("Found entry for {}: {}".format(key, d[key]))
+        for key in phoneBook:
+            print("Found entry for {}: {}".format(key, phoneBook[key]))
         input("")
-        phonebook(d)
+        
     elif choice == "5":
         print("Bye!")
     else:
         print("Please enter a valid command")
-        phonebook(d)
+        
 
 
-phonebook(d)
+
+
