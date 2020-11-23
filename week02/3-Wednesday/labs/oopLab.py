@@ -92,7 +92,6 @@ class Car:
         self.make = make
         self.model = model 
         self.color = color 
-
     def carDetails(self):
         print(f"Here are the details of this car{self.model}, {self.make}, {self.color}")
 
@@ -102,17 +101,20 @@ class Hybrid(Car):
     def carDetails(self):
         print("hi")
         super(Hybrid, self).carDetails()
-class Electric(Car):
-    def CarType():
-        print("I am an electric car")
+
+# class Electric(Car):
+#     def __init__(self, make, model, color):
+#         super(Electric, self)_init__(make, model, color)
+#     def CarType():
+#         print("I am an electric car")
 
 hybridCar = Hybrid("Prius", "Ford", "Red")
 print(hybridCar.model)
-electricCar = Electric("Volt", "Chevy", "blue")
+# electricCar = Electric("Volt", "Chevy", "blue")
 hybridCar.CarType
-electricCar.CarType
+# electricCar.CarType
 hybridCar.carDetails()
-electricCar.carDetails()
+# electricCar.carDetails()
 
 
 # Create a new class called Hybrid that inherits from the Car class
