@@ -1,0 +1,10 @@
+a {
+    text-decoration: none;
+    color: orangered;
+    font-family: 'Dancing Script', cursive;
+    }
+
+a:hover, a:visited {
+    text-decoration: underline;
+    color:purple;
+}    

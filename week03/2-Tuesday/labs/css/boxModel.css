@@ -1,0 +1,9 @@
+.mybox{
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+    border: 5px dashed black;
+    padding: 20px;
+    padding: 0 20 0 20;
+
+}

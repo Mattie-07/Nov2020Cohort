@@ -5,7 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        
+        .rel{
+            position:relative;
+            color:lightgreen;
+            left: 100px;
+            margin: 15px 0px 15px 0px;
 
+        }
+        .main{
+            position:relative;
+        }
+        .abs{
+            position:absolute;
+            background-color:green;
+            top: 15px
+        }
+        .fixed{
+            position: fixed;
+            top: 10px;
+            background-color: pink; 
+            z-index: 100px;
+        }
+        
+        img{
+            position: sticky;
+            Top:30px;
+            z-index: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -42,10 +71,12 @@
         <img src="images/kittens3.jpg" alt="">
     </div> -->
 
+
     <div id="navbar">
         navbar
     </div>
-    <div class="rel">
+
+        <div class= "fixed">
         The preamble sets the stage for the Constitution (Archives.gov). It clearly communicates the intentions of the
         framers and the purpose of the document. The preamble is an introduction to the highest law of the land; it is
         not the law. It does not define government powers or individual rights.
@@ -59,7 +90,7 @@
         ourselves and our Posterity, do ordain and establish this Constitution for the United States of America."
     </div>
 
-    <!-- <img id="puppy" src="images/puppies2.jpg" alt=""> -->
+    <img id="puppy" src="images/puppies2.jpg" height = "300px" alt="">
 
     <div>
         The preamble sets the stage for the Constitution (Archives.gov). It clearly communicates the intentions of the
