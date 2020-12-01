@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 header - 
     - md larger - video background
     - sm -image 
@@ -15,3 +16,21 @@ main content -
 
 
 footer  
+=======
+
+- header 
+    - md larger - video background 
+    - sm - image
+    - title - layer 
+    - opacity - layer 
+    - video -layer
+
+- navigation
+    - bs navition 
+
+
+- main content 
+
+
+- footer
+>>>>>>> 4563a03369270a02198110bff924d565b144f2a2
