@@ -1,0 +1,51 @@
+/*
+Pick the 5 colors I would use for my color pallete
+1)
+2)
+3)
+4)
+5
+
+Font color, and background color 
+*/
+body{
+    margin: 0;
+}
+
+.cp-bg-blue{
+    background-color: #48BEFF;
+}
+.cp-bg-lightBlue{
+    background-color: #3DFAFF;
+}
+.cp-bg-green{
+    background-color: #43C59E;
+}
+.cp-bg-olive{
+    background-color: #3D7068;
+}
+.cp-bg-darkGreen{
+    background-color: #14453D;
+}
+
+
+.cp-text-blue{
+    color: #48BEFF;
+}
+.cp-text-lightBlue{
+    color: #3DFAFF;
+}
+.cp-text-green{
+    color: #43C59E;
+}
+.cp-text-olive{
+    color: #3D7068;
+}
+.cp-text-darkreen{
+    color: #14453D;
+}
+
+
+
+
+)
