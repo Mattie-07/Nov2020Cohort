@@ -1,0 +1,20 @@
+/* Evry website needs to have an established font color and background color.
+backgroung color : #14453D
+Font color:48BEFF
+
+*/
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.cp-background{
+    background-color: #14453D;
+}
+
+.cp-black{
+    background-color: black;
+}
+.cp-fontColor{
+    color:#48BEFF;
+}

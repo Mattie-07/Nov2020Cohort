@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-header - 
-    - md larger - video background
-    - sm -image 
-    - title - layer
-    - opacity - layer
-    - video - layer
-        coolers.cp (its on slack) has alot of different color pallete to help build a site.
-
-
-navigation
-
-main content - 
-
-
-
-
-footer  
-=======
 
 - header 
     - md larger - video background 
@@ -33,4 +14,3 @@ footer
 
 
 - footer
->>>>>>> 4563a03369270a02198110bff924d565b144f2a2
