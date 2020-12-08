@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: yellow;
+            padding: 20px;
+            width: 200px ;
+            height: 200px;
+        }
+        p{
+            background-color: blue;
+            padding:5px;
+        }
+
+        .newClassRule{
+            background-color:limegreen;
+            padding:5px;
+
+        }
+
+
+    </style>
+</head>
+
+
+<body>
+Yo
+<button onClick='alert("hello")'><!-- Remember that this is a node! -->
+    Click Me!</button>
+
+    <div onmouseover="greeting()">Hello
+
+    </div>
+    <p style = >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eos nam adipisci ipsum obcaecati, ad, ullam velit quae magni modi, voluptas veniam eaque. Enim veniam consequuntur, ipsa asperiores quasi alias.
+    </p>
+
+
+
+</body>
+<script>
+    //retrieve elements out of the dom
+
+    let p = document.querySelector('p');
+
+
+
+
+    //tthne attach event listener to the DOm element
+    p.onclick = () =>{
+        p.setAttribute("class","newClassRule" )
+
+
+
+    }          // on click takes a function. Think about it, in order for the onlcick to work, a function has to be used in order for it to take out the actions. 
+
+
+
+    //set the attached element to a function
+
+
+
+
+    const greeting = () => {
+        console.log("hello There!");
+    }
+    // window.alert("hello")
+</script>
+</html>
