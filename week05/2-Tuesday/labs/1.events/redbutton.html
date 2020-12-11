@@ -8,7 +8,7 @@
 
     <style>
 
-        #big-red-button{
+        .big-red-button{
             background: tomato;
             width: 200px;
             height: 200px;
@@ -30,14 +30,47 @@
 
         <div>
             Big red button
-           
+
         </div>
 
         <div id="count">
 
         </div>
     </div>
+    <script>
 
+
+        let count = 0;
+        let bigRedButton = document.querySelector("#big-red-button");
+        let countDiv = document.querySelector("#count");
+
+        bigRedButton.addEventListener("click", ()=> {
+            count++;
+            countDiv.textContent = count;
+        })
+
+
+
+
+
+
+    //     //retrieve  the eleement out of the dom
+    //     let bigRedButton = document.querySelector("#big-red-button");
+
+    //     //attack onclick event listener
+
+    //     let clickCount = 0;
+    //     let countDiv = document.querySelector("#count");
+
+    //     bigRedButton.onclick = () =>{  // remember that a function has to be used in order for the event to happen
+
+    //         clickCount++;
+    //         countDiv.textContent = clickCount;
+
+    //     }
+
+
+    // </script>
 
     
 </body>

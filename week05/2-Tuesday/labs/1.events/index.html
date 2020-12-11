@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -18,9 +19,74 @@
     <li><img src="images/red.gif" alt="red" id="red"></li>
   </ul>
 
-  
+  <div id ="reponse">
+    
+  </div>
+
   <script>
 
+      //retreive a ul tag
+      let ulTag = document.querySelector("ul");
+      let response = document.querySelector("#response");
+
+
+      //attack el to ul tag
+    ulTag.addEventListener("click", (e) =>{
+// dont forget that the dollar sign is needed in order to format strings inside of text.
+        switch(e.target.id){
+            case "pink": 
+            response.textContent = `You've clicked a ${e.target.id} image box`
+            break;
+            case "yellow": 
+            response.textContent = `You've clicked a ${e.target.id} image box`
+            break;
+            case "orange": 
+            response.textContent = `You've clicked a ${e.target.id} image box`
+            break;
+            case "purple": 
+            response.textContent = `You've clicked a ${e.target.id} image box`
+            break;
+            case "blue": 
+            response.textContent =`You've clicked a ${e.target.id} image box`
+            break;
+            case "green": 
+            response.textContent = `You've clicked a ${e.target.id} image box`
+            break;
+            case "red": 
+            response.textContent = `You've clicked a ${e.target.id} image box`
+            break;
+            case "gray": 
+            response.textContent = `You've clicked a ${e.target.id} image box`
+            break;
+            default:
+              response.textContent = "color not found"
+
+
+        console.log(e.target);
+
+    }
+  })
+
+
+
+      //retreive response div
+
+
+
+
+
+          // //when a user clicks on an imge, the color pops up
+          // //retrieve  both of the elements that I want to manipulate and have an event listener.
+          // let green = document.querySelector("#ygreen");
+          // let response = document.querySelector("#response");
+
+
+
+          // green.addEventListener("click", () => {
+
+          //   response.textContent = "You've clicked on the green image"
+            
+          // });
     
   </script>
 

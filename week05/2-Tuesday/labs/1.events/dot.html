@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{ background-color: beige;
+        }
+
+        .dot{
+            height: 20px;
+            width: 20px;
+            background-color: purple;
+            border-radius:50%;
+            position: absolute;
+        }
+        .dot2{
+            height: 15px;
+            width: 15px;
+            background-color:orange;
+            border-radius:50%;
+            position: absolute;
+        }
+    
+        .dot3{
+            height: 10px;
+            width: 10px;
+            background-color:green;
+            border-radius:50%;
+            position: absolute;
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+
+
+<script>
+
+    let dots = ["dot","dot2","dot3", ];
+    // let dots = [{className:"dot", width:10} ,{className:"do1", width:10} },{className:"dot", width:10} }];
+
+
+    window.addEventListener("click", (e) => {
+
+
+
+        
+
+
+        //create an element that would represent a dot
+        let dot = document.createElement("div");
+
+
+        let index= Math.floor(Math.random() * 3 );
+        dot.className = dots[index];
+        //attach the class name
+        // dot.className = "dot"
+        //retrieve the x and y coordiantes from e 
+
+
+        //set properities for left( x ) and the top ( y direction)
+
+        dot.style.left = (e.x - 10).toString() + "px"; 
+        dot.style.top = (e.y - 10).toString() + "px";   //append dot  to body element 
+
+
+        document.body. appendChild(dot);
+
+
+
+    })
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
