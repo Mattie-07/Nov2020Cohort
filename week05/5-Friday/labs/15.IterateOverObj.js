@@ -11,8 +11,29 @@ var nums = {
     c: "string",
     d: 12
 }
+//typeOf();
+function sumObjectValues(nums){
+    if( nums.isInteger)
+        console.log("this works");
+
+}
+
+
 
 // Write code here 
 
+console.log(sumObjectValues(nums));
+
+//Andrea's code below
+function sumObjectValues(obj){
+    let sum = 0;
+    for (let key in obj){
+        if (typeof(obj[key]) == "number"){
+            sum += obj[key];
+        } 
+        
+    } 
+    return sum;
+}
 console.log(sumObjectValues(nums));
 // 42

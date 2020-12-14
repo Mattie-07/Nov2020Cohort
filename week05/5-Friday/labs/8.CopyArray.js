@@ -4,6 +4,7 @@
 var a = [1, 2, 3];
 var b;
 
+let newArray = [...a,]
 
 console.log(a);
 // [1, 2, 3];
