@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+
+
+    <script>
+        $(()=>{//remember that this stands for document ready
+
+                var ypoURL = [ "https://www.yellowpages.com/los-angeles-ca/restaurants?page=2 ",
+                "https://www.yellowpages.com/los-angeles-ca/restaurants?page=3",
+                "https://www.yellowpages.com/los-angeles-ca/restaurants?page=4"
+            ]
+                ypURL.forEach(url =>
+            $.get(url)
+            .done(response =>{}
+            
+
+            $.get('https://www.yellowpages.com/los-angeles-ca/restaurants')
+            .done(response => {
+
+                let $results = ($response).find(".title, .business-name")
+
+                for( let r of $results){
+                    try{
+                        console.log(`${r.innerText}`);
+
+                    }
+                    catch{
+
+                    }
+                }
+                console.log($results);
+            })
+
+
+        })
+    </script>
+</body>
+</html>

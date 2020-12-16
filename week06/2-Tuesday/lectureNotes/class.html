@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <form>
+        <form action="mailto:email@Matthewtroberts10@gmail.com" method ="POST" enctype="text/plain">
+        <div>
+            <label for="choose">Would you prefer a banana or a cherry?</label>
+            <input id="choose" name="i_like" required minlength="6" maxlength="6"> 
+        </div>
+        <div>
+            <label for="number">How many would you like?</label>
+            <input type="number" id="number" name="amount" value="1" min="1" max="10">
+        </div>
+        <div>
+            <label for="number">css or html</label>
+            <input type="text" id="I_like" required>
+        </div>
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+
+
+
+
+
+
+
+
+
+<!-- <form action="" method="GET">
+    <fieldset>
+    <legend>First Name</legend>
+    <input type="text" name="firstName" required minlength="3">
+    <legend>Last Name</legend>
+    <input type="text" name ="lastName" required maxlength="10">
+    <legend>email</legend>
+    <input id = "email" type="email" name="email" required>
+    </fieldset>
+
+        <input type="submit">
+
+
+
+
+    
+
+
+</form> -->
+
+
+
+
+
+
+
+
+<!-- <form action="form.html" method="POST">
+    <input type="text" name="firstName">
+    <input type="text" name="lastName">
+    <input type="password">
+    <input type="submit">
+
+
+</form> -->
+
+
+
+
+
+<!-- <form action="">
+
+<input type="text">
+<input type="radio">
+<input type="checkbox">
+<input type="password">
+<input type="submit">
+<button type="submit">Click Me</button>
+
+
+</form> -->
+
+
+<!-- <script>
+    let email = document.querySelector("#email");
+    email.addEventListener('input', (e)=>{
+
+        if(e.target.validity.typeMismatch){                                 //I could also use email.validity and email.setCustom...s
+            e.target.setCustomValidity("I expect an email, honey!")
+        }
+        else{
+            email.setCustomValidity("");
+        }
+
+
+        }
+
+
+
+
+    )
+
+
+</script> -->
+<!-- <script>
+    let form = document.querySelector("form");
+
+    form.addEventListener("submit", (e) =>{
+        e.defaultPrevented();
+        alert('form submitted"');
+        
+        
+    })
+</script> -->
+
+</body>
+</html>
