@@ -27,19 +27,19 @@
 have the state and the case
     <script>
 
-        // fetch("http://api.openweathermap.org/data/2.5/weather?q=boulder&appid=9361bd03ec7175e9eea92fdf7a717518")
-        // .then(response => response.json() )
-        // .then(data =>{
-        //     //celsius
-        //     let kelvin = data.main.temp;
-        //     let degC= Math.floor(kelvin -273.15);
-        //     console.log(degC);
-        //     let degF = Math.floor(degC * 1.8 +32);
-        //     console.log(degF);
+        fetch("http://api.openweathermap.org/data/2.5/weather?q=boulder&appid=9361bd03ec7175e9eea92fdf7a717518")
+        .then(response => response.json() )
+        .then(data =>{
+            //celsius
+            let kelvin = data.main.temp;
+            let degC= Math.floor(kelvin -273.15);
+            console.log(degC);
+            let degF = Math.floor(degC * 1.8 +32);
+            console.log(degF);
 
-        //     let div = document.querySelector('div');
-        //     div.textContent = `Current Temperature: ${degF}`
-        // })
+            let div = document.querySelector('div');
+            div.textContent = `Current Temperature: ${degF}`
+        })
 
 
 
