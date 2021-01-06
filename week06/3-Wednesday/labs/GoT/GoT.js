@@ -45,7 +45,7 @@ for(let pages = 0; pages <= 45; pages++)
         })
         $groupContainer.html(liTags.join(""))
         let $div = $(".list-group");
-
+        
         $div.click((e) => {
             e.preventDefault();
             console.log(e.target.href);
