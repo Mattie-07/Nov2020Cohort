@@ -12,9 +12,8 @@ readingLine.question("Please enter a file name\n", function(fileName){
         if(error)
             console.log(`${error.message}`);
         else{
-        let newString = buffer.toString();
-        console.log(newString.toUpperCase());
-        console.log(`The file in uppercase should read, ${buffer}`);
+        let newString = buffer.toString().toUpperCase();
+        console.log(`The file in uppercase should read, ${newString}`);
         }
 })
 })

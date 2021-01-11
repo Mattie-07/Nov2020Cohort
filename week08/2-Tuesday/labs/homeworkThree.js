@@ -7,21 +7,28 @@ const readingLine = readline.createInterface({
     input:process.stdin,
     output:process.stdout
 });
-readingLine.question("Please enter a file name\n", function(fileName){
-    fs.readFile(fileName, (error, buffer)=>{
+readingLine.question("Please enter a file name\n", function(inputFileName){
+    fs.readFile(inputFileName, (error, buffer)=>{
         if(error)
             console.log(`${error.message}`);
         else{
-        let newString = buffer.toString();
-           fs.writeFile(file, ()
-
-
-
-
-
-        console.log(newString.toUpperCase());
-        console.log(`The file in uppercase should read, ${buffer}`);
-        }
+            let newString = buffer.toString().toUpperCase();
+            readingLine.question("Please type the file with the output you'd like to use\n", function(outputFileName){
+                fs.writeFile(`${outputFileName}`, newString, (error)=>{
+                    if(error)
+                        console.log(`${error.message}`);
+                    else
+                        console.log(`file saved in ${outputFileName}`);
+                })
+            })
+        }}
+    )
 })
-})
+
+        
+
+
+        // console.log(newString.toUpperCase());
+        // console.log(`The file in uppercase should read, ${buffer}`);
+        // }})
 
