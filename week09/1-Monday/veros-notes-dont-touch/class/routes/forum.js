@@ -4,12 +4,12 @@ const router = express.Router();
 router.use(express.urlencoded({extended:false}));
 router.use(express.json());
 
-router.get("/forum", (req, res) => {
-  res.render('forum')
+router.get("/forums", (req, res) => {
+  res.render('forums')
 });
 
 
-router.post('/forum', (req, res) => {
+router.post('/forums', (req, res) => {
   
     //req.body
     // res.send('data')
