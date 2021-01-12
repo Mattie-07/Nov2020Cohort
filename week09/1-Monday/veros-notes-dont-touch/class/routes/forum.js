@@ -14,6 +14,7 @@ router.post('/forums', (req, res) => {
     //req.body
     // res.send('data')
 
+    
     res.status(200).json({name: req.body.name, message: req.body.message})
 })
 
