@@ -4,19 +4,21 @@ let dataFile = require("../data/data.json");
 
 router.get("/", (req,res)  => {
     let pageSpeakers = dataFile.speakers;
-    let pagePhotos = [];
+    let artwork = [];
     pageSpeakers.forEach(speakerObj =>{
-        pagePhotos = pagePhotos.concat(speakerObj.artwork)
+        artwork = artwork.concat(speakerObj.artwork)
 
     })
 
     
-    console.log(pagePhotos);
+    console.log(artwork);
 
 
     //this allows the index (or the speakers page) to communicate with index.ejs
     res.render("index", {
-            photos:pagePhotos
+            artwork:artwork,
+            pageTitle:"Roux Meetups",
+            pageID: 'home'
     })
 })
 
