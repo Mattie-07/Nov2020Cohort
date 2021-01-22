@@ -1,0 +1,19 @@
+
+A cookie is a piece of information that can be stored on the client side. Its just a piece of data. 
+A session is a cookie that is stored on the server side. 
+Every request that is made to the server, the broswer is going to check to see if you have any stored cookies that belong to that domain name. 
+Since http is stateless ( there is no memory stored between the request and response that happens) these cookies help by storing information. 
+If there are any cookies in the server, that matches your domain name, then the cookies are sent from the server to the browser to give you that stored information( like seeing if you have already logged in and have an account)
+A session is used to maintain state.
+
+what would need to be installed is 
+    install npm cookie-session
+
+    **
+    side note 
+    anything that uses app.use is considered middleware
+    **
+anytime that a session is created and there is a cookie, you can add your own data to it also, whatever the session data might be.
+
+After a person is verired or not through or a password or not, the person then is given a cookie, that cookie allows them to access other parts of the website from then on.
+Before we issue the cookie we check to see if their user name and passowrd is correct. 

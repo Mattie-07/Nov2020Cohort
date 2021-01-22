@@ -1,0 +1,62 @@
+Tghe code below is what generally what would have to be done to set up ther sequelize files, being able to have access to a database, and its foundation.
+
+
+
+install 
+    express
+    ejs 
+    cookie-session
+    sequelize 
+    pg 
+    pg-hstore 
+
+Routes (controllers)
+    home page - get 
+    login - post
+    registration(get) Retrive from the database
+    registration(post) add to the database
+
+ ejs
+    login
+    registration 
+
+Go to config.json to make sure all the configuration information is correct.
+Proof read  
+In root folder type db:create
+
+Create tables and declaring columns
+    Create a file called setup.bash in root
+    Use statement: " sequelize model:generate --name roles --attributes name:string,roleType:integer" Or something of that  
+        nature
+    Proof read
+    bash setup.bash
+        What is created is the migration folders and the models folder.
+        Go to migrations.
+            If a table references another table then insert the foreign key into that table. For Example:
+                        references:{ 
+                                    model: 'roles',
+                                    key: 'id'
+                                                } 
+            which would be nested inside of the ID of that table.
+        Go to Models folder
+            If there is a many to many relationship or a one to many relationship then this should be defined here.
+            Under the assosciate function the relationship will be defined here.
+                static.associate(models) {
+                    models.roles.hasMany(models.users, {foreignKey: 'roleID'})
+                             }
+                 The above code is in a file called roles. This model references the path it is in and defines how it has many relationships with the key word hasMany. Inside of the argument of hasMany, the models it has many relationships to is referenced. The first argument is the other model. The 2nd argument is the value at which it has the relationship.
+                    models.users.belongsTo(models.roles, {foreignKey: 'roleID'})  
+                The code above is similar to the first example. Yet the file names is the users and the relationship is being defined with the keyword belongsTo. Just as with the firsth the first arument is the name of the talbe that is being refrenced. The 2nd argument is the value of in that table.
+    Create roles for the user
+        Create seeder files.
+            Type in:
+                sequelize seed:generate --name roles
+
+
+
+
+
+        
+
+
+        

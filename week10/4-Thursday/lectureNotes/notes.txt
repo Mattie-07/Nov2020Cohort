@@ -1,0 +1,32 @@
+*APP.js
+
+** Storing Passwords slideshow is what the below notes goes over the most***
+pbkdf2 would needed to install first before we can begin which is 
+
+npm init would be first
+npm install pbkdf2
+
+
+salt would become a set of random characters.  Line 6
+ A salt takes a string of characters( like a password) and randomizes those characters
+ the first argument of the pbkf2 is the string that is going to be mixed up. Salt would need to be the 2nd arguement. Third arguement would be the number of times the characters would be mixed. fourth argument would be a number value
+
+ We're taking  the password, encrypting and also adding our word, ( our salt) in order for the password to be encrypted. Our hash would be used and stored as our password. 
+
+ let stored_pass = `pbkdf2_sha256$3600$${salt}$${hash}$`   means that we have mixed up the characters 256 times. and also the $ inbetween each variable are delimiterss They are going to be used to parse through the information so we could access it later.
+
+ The next step would be " how to compare what a user enters in order for a check to happen"
+
+ stored_pass.split('$')
+ we would use this so that there is a split ofr all of the different parts of the above code. It would be broken up into. pbkdf2_sha256 3600 salt hash
+  
+let newPassword = `some user password`;
+let keyNewLogin = pbkdf2.pbkdf2Sync(
+    newPassword,
+    pass_parts[2],
+    parseInt[pass_parts[1]],
+    256,
+    'sha256'
+)
+
+if the user had input the same exact password then the above code would compare with what we have with what they used.

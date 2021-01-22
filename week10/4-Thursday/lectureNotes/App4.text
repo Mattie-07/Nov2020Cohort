@@ -1,0 +1,4 @@
+If the cleint doesn't recieve the cookie, then there would be no way for them to have access.
+
+There are two different type of middleware, route type middleware and function type
+middle ware is a function that has req, res, and next function and the route level middle ware can be used by having a chain inside of the controller(route)

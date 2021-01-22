@@ -1,0 +1,29 @@
+APP3.js 
+
+Request => express => response
+express works through middleware.
+a middleware is a function 
+    one that specifically has a request, a response, and a next.
+
+let myFunction = function(req, res, next) {
+}
+
+Middleware is syncronous, so if my middle ware is before my routes then it would be executed before them and they will execute after the route, if there was an error for example.
+Middle ware 
+
+without the next keyword then thats means that there is no response. The next calls the next function in the chain.
+let authLogin = (req,res,next)=>{
+    console.log(`we're checking authentication`);
+    next()
+}
+
+app.get('/', authLogin, (req,res,next ) =>{
+    if (true){
+        res.send('home')
+    }
+    else{
+        next(new Error("there was an error"))
+    }
+})
+
+get a more firm understanding of the next feature and how it ties into the else statement that I have  on line 25.

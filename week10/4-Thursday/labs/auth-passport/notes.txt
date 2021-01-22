@@ -1,0 +1,44 @@
+install 
+    express
+    ejs 
+    cookie-session 
+    sequelize
+    pg 
+    pg-hstore
+
+
+
+route
+    home page - get
+    login ( form - get)
+    login - post
+    registration(get)
+    registration(post)
+
+ejs 
+    login
+    registration
+
+    after creating all of the files above the next thing you would need to do is make sure all the pg stuff is installed ( which it is) 
+    Then you would create the database, by going config.json and making sure all of the correct information is there.
+    Once that is done, in the root folder , type ' sequelize db:create'
+
+    Ok now to the next step, which is making the tables and declaring the columns.
+        create a file called setup.bash in the root
+        in there create "sequelize model:generate --name roles --attributes name:string,roleType:integer"
+        or something similar to that.
+            Whenever I am finished with this the keyword I would need to implement the code is :
+                bash setup.bash
+
+    **this also creates the migration! and the models as well!!**
+    Go to the migrations page and 
+        
+
+        ROLES NEEDS TO BE FIRST! DELETE USERS AND DO AGAIN
+
+        sequelize seed:generate --
+
+
+When the user 'posts" that is adding information to the database. 
+everytime we deal with the deatabase it is going to be an asnychornous call.
+Seems as if the middleware items are always put in the js files.
