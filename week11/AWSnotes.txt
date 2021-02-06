@@ -1,0 +1,15 @@
+
+
+-The Amazon Cloud Practioner is a great certification to have on the resume since there are alot of companies who need and use Dev Ops on their site.
+
+- The Developer Associate would be required to be employed ( and the certificated after that as well, which is AWS Certified Solutions Architect Associate and AWS Certified SysOps Administrator Associate )
+
+
+
+-Load balancer takes in an incoming request and runs it on an available server. This is for distrbuted systems.
+    The server has the node application installed on it ( they all would run, port 3000, for example)
+    If one other instance of the server happens to go down, the load balancher should be able to switch it to an available server.
+-If a Load Balancer goes down, other Load Balancers should be connected to the one that goes down and they constantly check the health of the other Load Balancers. If one goes down the algo will switch without an interruption in service.
+
+-One database can connect all of the applications with one that is reading from all of the databases, and another that writes to a centralized database.
+

@@ -15,7 +15,7 @@ const init = (passport) =>{
                     }
                     else{
                         //no session match
-                        done(null,fale)
+                        done(null,false)
                     }
                     
                 })

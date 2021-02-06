@@ -1,0 +1,13 @@
+With router.post, the user will be sent to a specific place based on whether they have been validated or not. 
+ For examples, if they are not authenticated, then they would be sent back to the login page or an error page. 
+
+Middleware would check to see if the user is authenticated or not. 
+
+The router will take in a method( the middleware method, in this case authReq) that
+
+
+***Middleware is just a function that takes in a req, res, and a next**
+
+On index.js, the middleware function that was created can be used at anytime to redirect the client to the page that I had chose.
+
+Everytime that a person goes from one page to another, the passport is called to check to see if they are authenticated or not ( except for the login and registration pages)

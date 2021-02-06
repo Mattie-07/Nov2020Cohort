@@ -1,0 +1,24 @@
+Three things are needed in order for react to work:
+    React
+    React Dom
+    Babel
+React dom
+IN reacxt the redner methof is going to tkae two thing. What you want to remer and what you want to rertriee.
+
+A componment is like a class or a function
+The way that information is passed in React, is by using a Tree. I
+
+Information is passed down from the root to the childern. Those children can pass down to other children. Children cannot pass information to other siblings. 
+
+
+npx is a package runner tool that comes with npm 5.2.
+
+this.state is always an Object. The constructor gives us the chance to define the state for this particular Component. Adding the state property(specifically this.state) to the constructor is how we would do it.
+        super(props);
+            is how a class referers to the parent's constructor. In this case in my state example, it would be React.Component
+
+the _ ( underscore)(is a way of showing that this is a custom function, not one prebuilt in React
+    using a method like _incrementCounter - one that is used to call a function regardless of the circumstance is called a helper function. Helper functions should be in the class that helps manage state.
+
+Under most circumstances, if I have an Object like this.state, I should also use a helper function that calls this.setState()
+ 

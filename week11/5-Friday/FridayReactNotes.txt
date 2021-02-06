@@ -1,0 +1,10 @@
+When passing around props remember that you cant pass them between siblings. Directories on the same level can't communicate with each other. Though, the parent can always speak to the child or grandchild.
+
+ReactDom.render takes in what you want to display. 
+The first letter in a file for all Components need to be capitalized.
+
+App.js is the parent and the contacts is the children.
+
+every class based Component is going to have a method called render
+
+Go over the first two hour of class again to get down the day and other example that she went over in the AM

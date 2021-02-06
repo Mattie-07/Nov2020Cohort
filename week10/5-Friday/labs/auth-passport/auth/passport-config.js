@@ -8,33 +8,35 @@ const db = require('../models');
 //req.body.username 
 //req.body.password
 
+//below the entire object will be returned
 const init = (passport) => {
 
     passport.use( new LocalStrategy((username, password, done) =>{
         
+        console.log(`inside pasport.use: username ${username}, password:${password}`);
         db.users.findAll({where: {username: username}})
         .then(records =>{
             //[{}]
             if( records  != null){
 
-                   let record = records[0];
-                   
-                   bcrypt.compare(password, record.password, (err, response)=>{
+                    let record = records[0];
+                    
+                    bcrypt.compare(password, record.password, (err, response)=>{
 
-                        if(response){
-                            //this means a match, user with correct password 
-                            console.log('passwords matched');
-                            //serialize user gets called here
-                           
+                            if(response){
+                                //this means a match, user with correct password 
+                                console.log('passwords matched');
+                                //serialize user gets called here
                             
-                            done(null, { id: record.id, username: record.username })
-                        }
-                        else {
-                            //no session for you - username mismatch 
-                            console.log('passwords didnt');
-                            done(null, false)
-                        }
-                   })
+                                
+                                done(null, { id: record.id, username: record.username })
+                            }
+                            else {
+                                //no session for you - username mismatch 
+                                console.log('passwords didnt');
+                                done(null, false)
+                            }
+                    })
             }
             else{
                 //no session fo you
@@ -53,7 +55,7 @@ const init = (passport) => {
 
     })
 
-    passport.deserializeUser((id, done)=>{
+    passport.deserializeUser( async(id, done)=>{
         //checking to see if user is valid with the cookie that was passed from request 
 
         // 5, 7

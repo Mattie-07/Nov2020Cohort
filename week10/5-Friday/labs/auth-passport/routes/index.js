@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const authReq = require('../auth');
 
+router.all('/admin/*', authReq);
+
 router.get("/", (req, res) => {
   res.send("home page");
 });

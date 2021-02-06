@@ -1,0 +1,29 @@
+**Password authentication**
+
+In order for there to be password authenication, we will need to have middleware inside of the routes.
+The name of that middleware is called, "passport.authenticate()"
+    An authencation is just another word for checking the username and the password inside of our database. 
+The 2nd arguement is authenication takes an object and it tells passport what to do if there is a success or failure with the login.
+    
+
+
+
+
+
+**notes on Middleware*
+    The definition of middleware is something(like a function ) that runs in between the time that the server gets the request and the time the server sends the response out to the client
+
+    The purpose of the next() keyword is to make sure that the next middleare function gets called after the current middleware function is done executing
+        You almost never see the next keyowrd inside of a controller function
+
+    Middleware is snycronous,  meaning that if you have it running in the beginning of the program then it will run first.
+    Since the router functions are typically at the end of the results that a user is looking for, the next fucntion is not passed to those paramaters. There is no other middleare for it to go to after that
+
+    You almost always want to put the middlware with the next functions at the top of the code.
+
+    if the middleware function looks like 
+        app.get('/users', auth, (res, res)=>)
+    Then that means any global middleware that was called before it would be called first. Once this middlware function is called, the auth middleware function is called first, then, the action middleware that is part of that function will run.
+        In the case above, once the cotrol flow goes to auth, a check can be made to see if the user is authenticated, then th ere can be some sort of action that is nested in the if statement and also the next() keyword will be in there also. 
+    If I would want the code to stop running after the next functtion then I would need an else statement or a return statment. next() does NOT work like a return statement.
+    Again, the nexst keyword will always process the next middleware function that is in order of the code being written. If the middlware function has a next() in it, then the middleware fucntion will process and afterward the code block that initally called the next can still process the rest of the code( if there is code to process)
