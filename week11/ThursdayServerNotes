@@ -22,3 +22,5 @@ the _ ( underscore)(is a way of showing that this is a custom function, not one 
 
 Under most circumstances, if I have an Object like this.state, I should also use a helper function that calls this.setState()
  
+
+  You caN add the structure to how your code will look inside of the components directory. 

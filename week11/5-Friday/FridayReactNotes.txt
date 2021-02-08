@@ -8,3 +8,12 @@ App.js is the parent and the contacts is the children.
 every class based Component is going to have a method called render
 
 Go over the first two hour of class again to get down the day and other example that she went over in the AM
+
+
+remember that app.js is passoing information to index.js and index.j is displaying the information from ReactDOM.render
+
+
+When you are in App.js that is where you import all of the other components. The structre can be made inside of the components but if its not then you can use that to make it inside of there.
+
+After you import a component you can use the key word " <component/> aNd then call the variables that you want to use.
+ALmost look at as if, contacts is being called in App.js and when it is called it is initallzing that object with first name 'props' that was in Contacts.
