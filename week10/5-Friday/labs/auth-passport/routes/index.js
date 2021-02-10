@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const authReq = require('../auth');
+// const authReq = require('../auth');
 
 router.all('/admin/*', authReq);
 
