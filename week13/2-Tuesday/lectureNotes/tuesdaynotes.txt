@@ -1,0 +1,69 @@
+
+The firrst argument in the useEffect is the callback function and the other is ther
+b
+
+closure is a function that is called inside of a function that gives accesss to the variables of the parent function even after the fucnton has been called.
+in the examples we did on app.js count is called a state varaible
+
+You only use useState when you are trying to track state and keep track of sometihng that needs to be remebered.
+Mounting is a fancy way of saying that the object is going to appear on the screen and be seen and it is the only way that it will be re-rendered on the screen with the combiniation of setState
+
+If im using functional based components then the callback function that I am using will have to be declared like
+    let callBackFunction = () ={}
+
+if im using class based components then I woulndt have to call initalize it withg let
+api key
+
+For the API key, the data would have to be saved to a state variable and from there , just use it so that it could change.
+
+
+
+*===========================================================================*
+    Hooks are only called from functional components
+    You can only define hooks at the very document of your application
+
+      const [state, setState] = useState(initialState)
+
+
+      The second parameter is how the state can be set with a function. and state in the variable that represents the state
+
+        const [count, setCount] = useState(0)
+  return (
+    <div style={{textAlign: 'center', paddingTop:'200px'}}>
+    <button>0</button>
+    </div>
+  )
+}
+The second parament is a function. The first parameter is the variable within the stae.
+setCount is going to change the state.
+<button onClick={}>{count}</button> is us using a function inline
+
+**********************************************************************************
+
+
+The code below will increase the count of a variable just by itself.
+*************************************************************************
+import React,{useState} from 'react'
+
+const  App = () => {
+    
+  const [count, setCount] = useState(5)
+  return (
+    <div style={{textAlign: 'center', paddingTop:'200px'}}>
+    <button onClick={() => setCount(count +1)}>{count}</button>
+    </div>
+  )
+}
+
+export default App;
+
+
+
+This code below is the same as below but it does make the code look cleaner because its just one fucntion inside of the return statement.
+
+***************************************************************************
+
+if I want my information to be remembered and for there to be some type of consistency for on my site. Using useEffet helps,
+
+in the dependecy list ( which is the 2nd arguemtn to useEffect, that will only , it is only going to execute when something has changed in count.
+

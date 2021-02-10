@@ -1,23 +1,23 @@
 
 import './App.css';
-import calculator from './components/calc'
 import './assets/styles/global.css'
+import Calculator from './components/calc';
 
 class App extends Component {
   render(){
-
-    let buttons = ["AC", "+/-","%", "X",
-          "7","8","9","/",
-          "4","5","6","-",
-          "1",'2','3',"+",
-          '0','1','=']
-
-
-  return (
+  return 
     <>
-    
+        <Container fluid>
+        <Row>
+        <Col>
+
+          <Calculator/>
+          
+        </Col>
+        </Row>
+        </Container>
     </>
-  )
+  
 }
 }
 export default App;

@@ -1,0 +1,36 @@
+// import React,{useState, useEffect} from 'react'
+
+// xon
+
+
+
+// const  App = () => {
+//   const initialCount = parseInt(window.localStorage.getItem('count') || 0) 
+//   const [count, setCount] = useState(initialCount)
+//   const [count2, setCount2] = useState(0)
+  
+//   const handleChange = () =>{
+//     setCount(count + 1)
+//   }
+//   const handleChange2 = () =>{
+//     setCount2(count2 + 1)
+//   }
+
+// useEffect(() =>{
+//   window.localStorage.setItem('count', count);
+//   console.log('count has been updated')
+// },[count])
+
+// useEffect(() =>{
+//   console.log('i get called alot')
+// })
+//   return (
+//     <div style={{textAlign: 'center', paddingTop:'200px'}}>
+//     {/* <button onClick={() => setCount(count +1)}>{count}</button> */}
+//     <button onClick ={handleChange}>{count}</button>
+//     <button onClick ={handleChange2}>{count2}</button>
+//     </div>
+//   )
+// }
+
+// export default App;

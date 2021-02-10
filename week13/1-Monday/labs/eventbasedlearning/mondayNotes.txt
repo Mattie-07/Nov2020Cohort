@@ -1,0 +1,17 @@
+Components are selfcontainted. They dont know whats going on in other components. Its almost like the tabs that you have open in your browser. They only are familiar with whats going on in their own world. 
+
+ State is used to determine what has changed over time. 
+     in a class based component, you would have to use this.props
+     for the same above you would have to use this.state
+
+
+
+
+We are going to pass down the data from the component from to app2.js as a prop in order for the info to be rendered
+A parent can pass data down to a child, ans we would want to pass down a search vaue
+
+When a component is displayed on the page is called mounting and taking it off the page is called demounting.
+
+The ApI call would go in componentDidMount = async() =>{ so 
+
+Passdown data from te news
