@@ -1,0 +1,16 @@
+When setting up the ReactDOM, remember to use exact for any path that has similar roots. 
+    in order for a user to get to the page / when there is another page with the route /something
+    the one with just the / would have to have the keyword 'exact'
+ 
+    Just like in JS, in react the Swtich tag is looking for the route that matches the one that the user is trying to get to. 
+    Children is a built in keyword
+    
+    className is what you would use in React while just regular class is used in JS
+    import './assets/styles.css' has access everywhere, with all the children because its at the root.
+    in class based components you use this.setState that takes in an object. 
+
+    In the very beginnning, the state that is in the constructor is what is going to get changed by all of the methods that I create later on
+
+could you use a useeffect if you dont have a dependecny list?
+
+You wouldnt have to use Use Effect in the exomple with did earlier because 
