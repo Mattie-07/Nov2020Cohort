@@ -1,0 +1,9 @@
+When using function based components, remember that App is, of course, a function. Any function that is inside of this function will need to be declared with a let variable in order for it to have its own scope yet still have access to all of the variables outside of the function.
+By itself, useEffect is just a method that gets called everytime that the return is invoked in App.
+
+
+1 fetch our movie data
+store out data insdie of state
+map through data display movie list
+attack to each movie an event listener with imdbID 
+when user clicks on movie, aother moive el will be fire: moevie api with id
