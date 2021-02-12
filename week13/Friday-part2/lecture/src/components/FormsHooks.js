@@ -24,7 +24,7 @@ const FormsHooks = () => {
           <form onSubmit={handleForm}>
             <input name="textValue" type="text" value={textValue}
                 onChange={(e)=>setTextValue(e.target.value)}
-               />
+                />
 
               <br/>
 

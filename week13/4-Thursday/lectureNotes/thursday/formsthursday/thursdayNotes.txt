@@ -14,3 +14,23 @@ When setting up the ReactDOM, remember to use exact for any path that has simila
 could you use a useeffect if you dont have a dependecny list?
 
 You wouldnt have to use Use Effect in the exomple with did earlier because 
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+project managemt folder
+We are going to try to keep the state as high as we can. so putting a state called Projects at the top is what we want. The states are the ID, category, and title. We are going to delete by ID because there is chance that things will have the same title. 
+Inside of projects we will have functions that we will pass down tho the children.
+There will be a fitler on the list of projects where if someone wants to delete a project, we will find the ID and remove  it from there.  
+
+    Add project
+        in here people will have the ability to input a project it will contain
+        a button
+            adding a category, and project which will be passed back up to the project.
+    Project 
+        Here the projects will be displayed.
+        "Project" the object will be passed down to this child. 
+        Project Item
+            "Project Item" will show all the details.
+            ID will be recognized down here
+            
