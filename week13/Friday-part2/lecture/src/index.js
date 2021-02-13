@@ -5,7 +5,7 @@ import BaseLayout from './components/layout/BaseLayout';
 import Forms from './components/Forms';
 import FormsHooks from './components/FormsHooks';
 import Parent from './components/liftingState/Parent';
-import ProjectManagement from './components/projectManagement/ProjectManagement'
+import ProjectManagement from './components/ProjectManagement/ProjectManagement'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/styles.css';
 

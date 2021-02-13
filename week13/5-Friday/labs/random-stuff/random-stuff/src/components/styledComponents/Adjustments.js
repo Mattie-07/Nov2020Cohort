@@ -1,7 +1,19 @@
-import React from "react";
+// import React from "react";
+// import styled from 'styled-components'
 
-const Adjustments = () => {
-  return <></>;
-};
+// const days =["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday"]
 
-export default Adjustments;
+
+// const Adjustments = () => {
+//   return <ul>
+//         {dev.map((day, i =>{
+//         return <li even ={(i+1) %2 ===0}>{day}</li>)
+    
+    
+    
+//         })}
+    
+//     <ul/>;
+// };
+
+// export default Adjustments;

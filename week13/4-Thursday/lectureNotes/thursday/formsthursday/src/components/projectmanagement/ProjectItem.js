@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const ProjectItem = (props) => {
-  return (
-    <>
-      <li>
+  return <>
+
+          <li>
                 <div className="row">
                   <div className="col-8">
                   {props.proj.title} - 
@@ -14,10 +14,12 @@ const ProjectItem = (props) => {
                     <a href="#" onClick={() => props.onDelete(props.proj.id)}> X 🔥 </a>
                   </div>
                 </div>
-            </li>
-    </>
-  )
-}
+                
 
-export default Project
-<div
+                
+            </li>
+
+  </>;
+};
+
+export default ProjectItem;

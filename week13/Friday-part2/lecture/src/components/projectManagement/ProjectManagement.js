@@ -12,23 +12,23 @@ const ProjectManagement = () => {
     useEffect(() => {
         setProjects(
             [
-              {
-                  id: uuidv1(), //unique id
-                  category: "Front-End",
-                  title: "Javascript"
-              },
-              {
-                  id: uuidv1(),
-                  category: "Back-End",
-                  title: "Node"
-              },
-              {
-                  id: uuidv1(),
-                  category: "Front-End",
-                  title: "React"
-              }
-          ]
-          )
+                {
+                    id: uuidv1(), //unique id
+                    category: "Front-End",
+                    title: "Javascript"
+                },
+                {
+                    id: uuidv1(),
+                    category: "Back-End",
+                    title: "Node"
+                },
+                {
+                    id: uuidv1(),
+                    category: "Front-End",
+                    title: "React"
+                }
+            ]
+            )
     }, [])
 
     const handleAddProject = (newProject) => {

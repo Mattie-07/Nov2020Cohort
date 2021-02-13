@@ -1,0 +1,1 @@
+Closure is having acces to the parent function's variables even if the parent function has not been called. 

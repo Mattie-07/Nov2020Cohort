@@ -1,28 +1,19 @@
-import React, {useState, useEffect} from 'react'
-import addProject from './AddProject'
-import Project from './Project'
-import { v4 as uuidv1 } from 'uuid';
+    import React, {useState, useEffect} from "react";
+    import AddProject from './AddProject';
 
-const ProjectManagement = () => {
-    const[projects, setProjects] = useState([]); // [{id , category, title}]
-    //it will set the inital data for the project array 
-    // each array will containt three keys, an id, title, and category.
-    const handleSubmit = (e) =>{
-        e.preventDefault();
-        props.addProject{
-            id:uuidv1,
-            title: title,
-            category
-        })
+    import Project from './Project';
+    import { v4 as uuidv1 } from 'uuid';
 
+    const ProjectManagement = () => {
 
+        const [projects, setProjects] = useState([]);  //[{id, category, title}, {}, {}]
 
-    }
-    useEffect(() =>{
-        setProjects(
-            [
+        //set initial data for project array
+        useEffect(() => {
+            setProjects(
+                [
                 {
-                    id: uuidv1(),
+                    id: uuidv1(), //unique id
                     category: "Front-End",
                     title: "Javascript"
                 },
@@ -38,53 +29,58 @@ const ProjectManagement = () => {
                 }
             ]
             )
-    }, [])
-    const handleAddProject = (newProject)=>{
-            setProjects([newProject, ...projects]) // INmfmratoin here will be pased to the object.
-    }
+        }, [])
 
-    const handleRemoveProject = (id) =>{
-        //this will eventually passed down to the child.
+        const handleAddProject = (newProject) => {
+            //prevents mutation of old state by spreading the old state and adding
+            // the newProject object to the end of the new array
 
-        //spread to remove mutation of old state
-        let oldProjects = [...projects];
+            setProjects([newProject, ...projects]);
+        }
 
-        let filteredProjects = oldProjects.filter(project =>{
-            return id !== project.id  // checking to see if the id is the same. if they are not its filtered and put back inside of the filtered project variable
-        })
-        //state is updated with new filtered projects
-        setProjects(filteredProjects);
+        const handleRemoveProject = (id) => { //3  [3, 4, 5, 6, 7]
 
+            //spread to prevent mutation of old state.
+            let oldProjects = [...projects];
 
-    }
+            let filteredProjects = oldProjects.filter(project =>{
+                return id !== project.id
+            })
+            //state is updated with new filtered projects
+            setProjects(filteredProjects);
+            
+        }
 
-    return (
-        <>
-        <div className="row">
+    return <>
+        
+        <div className="row mt-5">
             <div className="col-6 offset-3 text-center">
                 <h3>Project Management</h3>
             </div>
         </div>
-    
-    <div className="row">
-    <div className="card">
-    <h5 className="card-header">Featured</h5>
-    <div className="card-body">
-        <h5 className="card-title">Special title treatment</h5>
-    </div>
-</div>
-        <div className="col-6 offset-3">
-    </div>
-    {/* somewhere down here Im also going to be using the code that hnadled that other method I created */}
-    </div>
-    <div className="row">
-        <div className="col-6 offset-3 mt-5">
-            <AddProject addProject={(projects)=>handleAddProject(projects)} /> 
-            {/* the projecs are going to be passed down to its childer with the prop declared on this line.  */}
-        </div>
-    </div>
-    </>
-    )
-    }
 
-export default ProjectManagement
+        <div className="row">
+            <div className="col-6 offset-3">
+                <div className="card">
+                    <h5 className="card-header">Add a Project</h5>
+                    <div className="card-body">
+                        <AddProject addProject={(project)=>handleAddProject(project)} />
+                    </div>
+                </div>
+                {/* end of card */}
+            </div>
+            {/* end of col-6 */}
+            
+        </div>
+        {/* end of row */}
+
+        <div className="row">
+            <div className="col-6 offset-3 mt-4">
+                <Project onDelete={(id)=>handleRemoveProject(id)} projects={projects} />
+            </div>
+        </div>
+
+    </>
+    };
+
+    export default ProjectManagement;

@@ -52,7 +52,7 @@ const AddProject = (props) => {
           <Dropdown.Menu>
             <Dropdown.Item onClick={()=>setCategory('Front-End')} href="#/action-1">Front-End</Dropdown.Item>
             <Dropdown.Item onClick={()=>setCategory('Back-End')} href="#/action-2">Back-End</Dropdown.Item>
-           
+  
           </Dropdown.Menu>
         </Dropdown>
       </div>
