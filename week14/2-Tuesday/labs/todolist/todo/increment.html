@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js' ></script>
+    <script>
+    const increment = ( count) => {
+        return {
+            type:"INCREMENT",
+            count: count
+        }
+
+    }
+
+    const decrement = (count) => {
+        return{
+            type:"DECREMENT",
+            count: count
+        }
+
+    }
+
+
+    let initalState = {
+        count: 0
+    }
+    
+
+
+
+    const reducer = (state, action) =>{
+            if(state === undefined){
+                state = initalState;
+            }
+            if(action.type === 'INCREMENT'){
+                return {
+                
+                    count: state.count + action.count 
+                }
+            }
+            else if(action.type === 'DECREMENT'){
+                return {
+                    count:state.count - action.count
+                }
+            }
+            else
+                return state
+    }
+
+    let store = Redux.createStore(reducer)
+
+    let showState = () =>{
+        console.log(store.getState())
+    }
+
+
+
+    store.subscribe(showState)
+    store.dispatch(increment(7))
+    store.dispatch(increment(10))
+    store.dispatch(increment(20))
+    store.dispatch(decrement(30))
+    
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

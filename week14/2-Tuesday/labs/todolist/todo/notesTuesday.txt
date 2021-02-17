@@ -1,0 +1,83 @@
+The purpose of Redux is to be able to access the state with out prop components and you are able to access the state from one 'store' without having to prop to get it.
+
+She always says that we should try and keep our data as high up on the tree has possible. I need to find out what she means exactly by that by doing some more research, going to Discord if needed. 
+
+======================================================///////////////////////////============
+========///////////////////==================================================================
+What Redux helps solve is when you have multiple components and you need to pass, say, a function, down the tree when the components when other components in the tree don't need the function yet the one at the very end does. 
+    **The subtitle of the slideshow is State Management**
+    On a plain html enviromnent we have a design pattern called an oberve pattern
+        it works with button clicks and event listeners. In this pattern there are names that are given. Like, 'mouseClick'.
+
+    Each browser window is in its own world and is self-contained. The same thought works behind components as well.
+
+    You can have one event listener that is supposed to track from those multiple windows. Each componenent can be looked at as its own window. In Redux the event is called an 'action'. Actions have a type that is associated with it. And some type of data
+
+    The reducer makes sure the logic from a button click is executed. And redux helps determine which event to execute based on the click. The Event listeners are in the reducer. Its goal is to update the global state; the attributes contained in the store. 
+
+    The components send events to the store, which will eventually update the global store.  The store is then updated by the reducer. Each component will have an action that has a specific name.
+
+
+    The store is an object of the global state. Its the main piece where things happen in Redux. The type and the name of the action will match in order for state in the store to be updated.
+
+
+
+
+//////////////////////////////==========================/////////////////////////==================
+===============================////////////////////////=========================///////////////////
+
+The state of the entire application lives inside of the store.
+
+An action is an object. Every action will have a type assoctiated with it and also a payload. The store is going to receive an action then it will find the reducer to find the type that matches the name that it has. In the store, the type is always a key.
+
+When a function returns an action its called an action creator. 
+
+Actions will always have a type. The type is like the name of the event.
+
+What is a pure reducer? What does it mean when something is called a pure function.
+Pure reducers, if given the same input they will be given the same output.  The same thing would also apply to a pure function. If the input is a, and it returns a then a will always be returned. 
+
+The store is the only peice that has knowledge of the reducer and the components
+
+The provider allows the Redux store available to any nested 
+
+The reducer is a function. Two things that are passed to it are the current state and the action. State has to be somewhow returned from the reducer function
+
+nfn is a named function and will bring up the template for a function ot be written.
+State is an object
+in the examples I've done on the html page, I first check ot see if the state is already there because if it isn't and the value is undefined then that means that I would use another conditional statment to find the matching type to change the state.  We will be looking for the event name
+
+The filter function would return a new array.
+    In the redux.html code, I created an empty array called persons where I could use the filter method return
+
+????? How does the logic on line 60 tie in to everything that I already wrote?
+
+Wait! Every action that is going to get passed to my reducer will have an id. The id will help deteremine how things would execute.
+    I know the the add person functoin would intereact with 
+
+    using the spread operator inside of a declaration for an object will initialize all of the key values from the old object to be the same in the new object.
+    so saying this 
+        let newArray = {
+            ...oldArray,
+            newValueCanbeAdded: "newString"
+        }
+    will give us a new object called newArray that has all of the values from the old array and also we have a key value pair too that has been added to it called newCalueCanbeAdded with a String attached to it. 
+    If I address a key that is already declared in the oldArray then I can change the value for it in newArray.
+
+    the store method dispatch takes an action object as its parameter.
+
+    The script tag is in the beginning of the html file would be needed if I am going to write in one. Not sure yet if it would be needed once I start using React with it also
+
+    What i need to remember when making sure that I add or decrement is that in the "component" that I state the key value pair of count:count
+
+    also in my code if I wanted to increment and decrement a number I would have to first pass the number into the function because the error that I am running into is a scope issue. 
+
+    ?????? why am i using the words ....state in the beginning of my functions that are inside of the reducer.?????
+
+    ?????? I was still able to get the smae answers even when I removed the ...state from the example on increment.html. Why is that?
+
+
+
+    *******************************
+
+    1:41 for the 2nd video of 2/15
