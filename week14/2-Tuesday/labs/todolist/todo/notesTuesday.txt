@@ -78,6 +78,20 @@ Wait! Every action that is going to get passed to my reducer will have an id. Th
 
 
 
-    *******************************
+    *************************************************************************
 
-    1:41 for the 2nd video of 2/15
+    The provider is going to provide acces from React to Redux. It will wrap the entitre application that we will write. The provider does nothing by itself. We would need to pass in the store in order for some functionality to occur.
+
+    remember that components are always uppercase and that functions are lowercase 
+    every action is going to return an object and that object is going to include, at the least, a type.
+
+    Every return inside of the reducer is also going to have to return the state. In the examples we used before, we used the spread operator to ensure that whatever was in the state before would still be recognized and remembered. Then the other key values used would be to update the state. 
+
+    All of the commented code is about the 2nd part of the video that was released on tuesday
+
+    ***************************************************************************
+    
+    Not sure yet what a helper method is but it is going to help us dispatch an action and pull state down. They are called map.stateToProp
+    
+    ** A higer order function is one that takes another function in as an arguement**
+            The same is true for a higher order component   -   it takes in a component and returns a new component with all the additional logic that reads from the global state. This is the purpose of connect in app.js
