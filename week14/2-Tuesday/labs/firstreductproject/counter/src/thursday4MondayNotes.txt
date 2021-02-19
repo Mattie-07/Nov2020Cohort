@@ -1,0 +1,33 @@
+The reducer changes the global state within the store. In order for that to happen, the reducer takes in the state, and an action as an argument. It could be looked at like, in order for the global state to be changed, the reducer must know the state that its going to change and the function to do so.
+    Even though the reducer is the way the global state changes, its done so by the store method of dispatch. The code would look like:
+        store.dispatch(functionThatICreated); // 
+    
+
+    The object that is in the return statement in the mapDispatchToProps is a prop to be used in our application.
+    The ()=>function() is to ensure the function doesn't execute right away. The return for function wouldnt happen until the action actually goes through, like a button click
+
+    We have a prop that represents a function that will dispatch our action
+    
+    Provider gives logic to pull state from the store. Provider is a function from react. Connect is from Redux that allows redux and provider to act together
+
+Our createStore method can hold two different arguments: the reducer and also middleware
+
+????? In our baselayout im not really sure what props.children does in our application. What I do know: we are interacting with the parent so that this component can be used in a different part of the application.(Or are we pushing up?)
+
+The switch statement that we have in index.js is going to return a component based on the path in the browser.
+
+We want to be able t osee the count from a global state.
+
+
+
+???? At 44:54 she said that we dont need to dispatch because we arent going to be dispatching... What does it mean to dispatch
+
+when you want to make a compoennt then go to the baselayout, and add the component there.T hen go to index to make it as a route
+
+when using function you only use useSelector and useDispatch
+
+const dispatch = useDispatch(); gives us access to our dispatch function
+
+When using functional based components, useSelector is just for displaying and showing information. useDispatch its to manipulate behavior (ie to write function that can be passed)
+
+???????What does it mean to pass the state variable, state.count in ViewCountHooks.js

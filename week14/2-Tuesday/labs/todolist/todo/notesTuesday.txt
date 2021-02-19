@@ -95,3 +95,7 @@ Wait! Every action that is going to get passed to my reducer will have an id. Th
     
     ** A higer order function is one that takes another function in as an arguement**
             The same is true for a higher order component   -   it takes in a component and returns a new component with all the additional logic that reads from the global state. This is the purpose of connect in app.js
+    
+    In mapStateToProp the prop is going to be value in the key value pair inside of its own method. Its parameter( which is usually called state) is going to represent the global state
+
+    In the example on app.js we used mapStateToProp to allow the title and counter to be passed as a global state. The props that will be used will be from mapStateToProp
