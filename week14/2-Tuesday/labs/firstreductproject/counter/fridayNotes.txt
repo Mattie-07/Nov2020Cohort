@@ -1,0 +1,16 @@
+???? What is the meaning to the following line? its line 28 in counterReducer
+
+person: state.person.filter(person => action.data.firstName != person.)
+
+When creating something like a form we want to 'record' the data. The only way that would happen is if we had some way to record it and that is by using state. On the form we create local state to be able to store those values
+
+??? What is the definition of dispatch?
+
+Dont forget that even though the reducer changes the state you can also initalize the state from th beginning of the peice of code as well.
+
+??? Code like the arrow function on line 10 doesnt' make enough senes to me. Ask Chris or Micah the definition of it so I could be able to use it whenever I need to.
+
+?? The li tag inside of the return function doesnt make any sense to me either.
+
+const persons = useSelector(state => state.persons) // an array of objects.
+The code above is alot like mapStateToProps, in which we are to pull down aa variable from the global state.

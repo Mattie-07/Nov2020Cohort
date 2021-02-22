@@ -1,0 +1,32 @@
+When making the shopping application, we are going to start with three components. The Cart component and its two children, delete and add component.
+
+You want to keep the state as high as you can. 
+
+let store createStore() ; This line initalizes redux
+The provider from redux is used in order for javascript and redux to be able to communictae. This provider would be placed 
+We would have to pass the redux store to the provider so that the components could have access to it. The provider gives redux access to react
+
+The thought behind using redux is that you dont go into a project thinking, " I need to use Redux" its more like, you have alot of different component that need to be able to share state. Redux would solve that by bringing in a global stae
+
+In the examples that we are doing for the shopping cart, we are using the pdouct information to determine whhich product that are going to add and delete inside of th action folder. Typically this should not be used because there is a chance that one product has the same name as another product. Instead what should be used is a product ID. 
+
+The reducer looks for the type that would execute the code. 
+A reducer is nothing more than a function! The reducer functions must have two different arguments - the state and the action. They need to be in that order for them to work.
+
+In the cart exmaples, we did a npm install uuid in order for us to have a unique identifier for the items that we are putting inside of our cart. We alos imported it by using import{ v1 as uuid} from "uuid" in order for us to use it in our reducer. Its going to be used in our reducer because that i wher we are creating and using state.
+
+After settting up our inital state in the reducer file, we would need to passs those values to our reducer...
+
+In the filter function, it is checking a boolena value and if the result is true then that value is returned, if not it isn't
+                let filteredCart = state.cart.filter(p =>{
+                    return p.id != action.data.id 
+                })
+The code above means that if its true between these two variales, then the state is returned. Otherwise, if they are not equal to each other then nothing is returned
+
+                totalCost: state.totalCost + parseFloat(action.data.price),
+
+On the line above, action.data.price is taking the object that is being passed into the reducer, accessing the key form that object, and then the state that wa is passed to the key.
+
+Connect is a higher order component - one that takes in another component to geerate another.
+
+look at mapStateToProps as if it pulls down information. And of course, mapStatetoDispatch is how things are going to be changed.

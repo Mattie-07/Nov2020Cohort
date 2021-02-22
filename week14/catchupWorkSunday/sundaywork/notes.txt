@@ -1,0 +1,8 @@
+React is a library that is used to build a SPA, a single page application.
+A big selling point for React is that it allows for the page to be updated without having to hit refresh.  It also has reusable components that have their own state which makes it easier to build a website dynamically. 
+Look at whatever im building as just a bunch of components
+State is an object that determines how a component will render / behave
+
+Its not require for the components to have import react from 'react' any longer. It used to be a thing but not any longer.
+
+Im about about minute 30 for the current video on Travery Media...

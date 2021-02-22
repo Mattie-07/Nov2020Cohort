@@ -17,4 +17,3 @@ export const removePerson = (firstName) => {
 
 
 
-export default addPerson;

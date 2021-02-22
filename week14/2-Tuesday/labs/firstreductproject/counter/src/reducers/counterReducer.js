@@ -23,9 +23,10 @@ const counterReducer = (state, action) => {
                     ...state,
                     person: [...state.person, action.data]                    }
             case 'DELETEPERSON':
+                
                 return{
                     ...state,
-                    person: state.person.filter
+                    person: state.person.filter(person => action.data.firstName != person.firstName)
                     }
             default:
                 return state;

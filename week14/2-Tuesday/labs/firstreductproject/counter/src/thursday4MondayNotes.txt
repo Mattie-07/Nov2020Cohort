@@ -31,3 +31,5 @@ const dispatch = useDispatch(); gives us access to our dispatch function
 When using functional based components, useSelector is just for displaying and showing information. useDispatch its to manipulate behavior (ie to write function that can be passed)
 
 ???????What does it mean to pass the state variable, state.count in ViewCountHooks.js
+
+Components w
