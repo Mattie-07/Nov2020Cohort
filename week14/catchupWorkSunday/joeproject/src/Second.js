@@ -1,4 +1,5 @@
 import React from 'react'
+import {useSelector, useDispatch} from 'react-redux'
 
 
 function Second(props) {
@@ -7,8 +8,9 @@ function Second(props) {
         <h1>
         Counter: Second state
         </h1>
-        <button> Increment </button>
-        <button > Decrement </button>
+        <p></p>
+        <button onClick={()=>dispatch({type:"INCREMENT"})} > Increment </button>
+        <button onClick={()=>dispatch({type:"DECREMENT"})}> Decrement </button>
         <p>{props.name}</p>
         </>
     )

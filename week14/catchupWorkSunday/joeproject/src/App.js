@@ -15,7 +15,7 @@ function App() {
         Counter: Local State
       </h1>
       <p>count</p>
-      <button onClick={()=>console.log("")} > Increment </button>
+      <button onClick={()=>dispatch({type:"INCREMENT"})} > Increment </button>
       <button onClick={()=>dispatch({type:"DECREMENT"})}> Decrement </button>
       <button onClick={()=>dispatch({type:"ADD_USER"})}> Add Matthew </button>
 
