@@ -8,7 +8,6 @@ import Parent from './components/liftingState/Parent';
 import ProjectManagement from './components/ProjectManagement/ProjectManagement'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/styles.css';
-
 import {
   BrowserRouter as Router,
   Route, Switch
