@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import increaseAction from '../actions/increaseAction'
 import decreaseAction from '../actions/decreaseAction'
 
-const CountHooks = (props) => {
+const CountHooks = () => {
 
     const dispatch = useDispatch();
     const count = useSelector(state => state.count) // named after the state that we want to see

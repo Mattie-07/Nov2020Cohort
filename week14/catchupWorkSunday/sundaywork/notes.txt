@@ -6,3 +6,5 @@ State is an object that determines how a component will render / behave
 Its not require for the components to have import react from 'react' any longer. It used to be a thing but not any longer.
 
 Im about about minute 30 for the current video on Travery Media...
+
+When creating a list of components I should be mindful to create a unique key for each one of the tags that I am creating.
