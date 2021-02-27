@@ -1,0 +1,9 @@
+Cookies are not cross-domin. You can't share cookie from one domain to another. what does work is tokens.
+npm install jwt-simple will give us the opporunity to create json webtokens on our server
+
+because we are going to be scraping the user's email address we are going to need a body parser from my post request inside of my authenication file. 
+Then we encrpty it  using bcrypt
+then we are to use our models
+and a jwt token is created. ccreadcdreasdcereadcdreaedcdreas
+
+when we use async await, we always want to use a try catch block
