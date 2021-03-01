@@ -4,17 +4,11 @@ import {signout} from '../../actions/index'
 
 const Signout = () => {
 
-  const dispatch = useDispatch();
+ const dispatch = useDispatch();
   const logOut = () =>{
     dispatch(signout())
   }
 }
-
-
-
-
-
-
 const Signout = () => {
   return <div style={{height: "100vh"}} className="d-flex flex-column justify-content-center align-items-center">
   <h1 className="text-white">Goodbye</h1>

@@ -3,7 +3,7 @@ import actionTypes from './actionTypes';
 import axios from 'axios'
 
 
-export const signUp = (formData) => {
+export const signUp = (formData, cb) => {
     console.log(formData)
         //will take the username and password
         //will call our server api ( the database)
@@ -17,6 +17,7 @@ export const signUp = (formData) => {
                 //dispatch action to recuder
                 dispatch({type:"AUH_USER", data:response.data.token})
                 localStorage.setItem('token', response.data.token);
+                cb();
             }
         
             catch(e){

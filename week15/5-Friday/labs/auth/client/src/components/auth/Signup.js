@@ -2,20 +2,27 @@ import React, {useState} from "react";
 import { Link } from 'react-router-dom'
 import {useDispatch} from 'react-redux'
 import {signUp} from '../../actions/index'
+import moduleName from 'module'
+import history from 'react-router-dom'
 
 export const Signup = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const dispatch = useDispatch();
+  const history = useHistory();
 
-  const handleSubmit = (e) => {
+  const handleSubmit =  (e) => {
     e.preventDefault();
     //call action
     //pass the email address and password to our action
+    //dispatch will have another function sperate from the call back function
     dispatch(signUp({
       email:email,
       password: password
-    }))
+    }), ()=>{
+      history.pushState('/welcome')
+
+    })
   }
   
 
